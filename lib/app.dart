@@ -1,8 +1,7 @@
-//library swole_log;
+//library Gains_log;
 
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:swole_log/app.dart';
 import 'view/home.dart';
 
 
@@ -11,18 +10,18 @@ import 'view/home.dart';
 //part 'util/authentication.dart';
 //part 'page/splash_page.dart';
 
-class SwoleLogApp extends StatefulWidget{
+class GainsLogApp extends StatefulWidget{
 
-  const SwoleLogApp( {
+  const GainsLogApp( {
     Key key
   }) : super(key: key);
 
   @override
-  SwoleLogAppState createState() => new SwoleLogAppState();
+  GainsLogAppState createState() => new GainsLogAppState();
 }
 
 
-class SwoleLogAppState extends State<SwoleLogApp>{
+class GainsLogAppState extends State<GainsLogApp>{
   
   @override
   void initState(){
@@ -37,17 +36,17 @@ class SwoleLogAppState extends State<SwoleLogApp>{
   @override
   Widget build(BuildContext context){
     return new MaterialApp(
-      title: 'Swole Log',
+      title: 'Gains Log',
       theme: new ThemeData(
         fontFamily: 'Roboto',
         primarySwatch: Colors.indigo,
         brightness: Brightness.dark,
         secondaryHeaderColor: Colors.orangeAccent
       ),
-      home: new SwoleLogHome(),
+      home: new GainsLogHome(),
       routes: <String, WidgetBuilder> {
-        '/home': (BuildContext context) => new SwoleLogHome(),
-        //'/add': (BuildContext context) => new SwoleLogSettings(_configuration, configurationUpdater),
+        '/home': (BuildContext context) => new GainsLogHome(),
+        //'/add': (BuildContext context) => new GainsLogSettings(_configuration, configurationUpdater),
       }
     );
   }

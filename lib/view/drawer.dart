@@ -3,8 +3,8 @@ import 'package:flutter/foundation.dart';
 
 import 'dart:math' as math;
 
-class SwoleLogDrawerHeader extends StatefulWidget {
-  const SwoleLogDrawerHeader({
+class GainsLogDrawerHeader extends StatefulWidget {
+  const GainsLogDrawerHeader({
     Key key, 
     this.light,
   }) : super(key: key);
@@ -12,10 +12,10 @@ class SwoleLogDrawerHeader extends StatefulWidget {
   final bool light;
 
   @override
-  _SwoleLogDrawerState createState() => new _SwoleLogDrawerState();
+  _GainsLogDrawerState createState() => new _GainsLogDrawerState();
 }
 
-class _SwoleLogDrawerState extends State<SwoleLogDrawerHeader> {
+class _GainsLogDrawerState extends State<GainsLogDrawerHeader> {
   
   MaterialColor _logoColor = Colors.green;
 
@@ -51,7 +51,7 @@ class _SwoleLogDrawerState extends State<SwoleLogDrawerHeader> {
   }
 }
 
-class SwoleLogDrawer extends StatelessWidget {
+class GainsLogDrawer extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
     final ThemeData themeData = Theme.of(context);
@@ -60,7 +60,7 @@ class SwoleLogDrawer extends StatelessWidget {
 
     final Widget aboutItem = new AboutListTile(
       icon: const FlutterLogo(),
-      applicationVersion: 'SwoleLog App v0.1'
+      applicationVersion: 'GainsLog App v0.1'
     );
 
     final Widget addItem = new ListTile(
@@ -70,7 +70,7 @@ class SwoleLogDrawer extends StatelessWidget {
     );
 
     final List<Widget> allDrawerItems = <Widget>[
-      new SwoleLogDrawerHeader(),
+      new GainsLogDrawerHeader(),
     ]
     ..addAll(<Widget>[
       const Divider(),

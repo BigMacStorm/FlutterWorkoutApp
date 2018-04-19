@@ -3,16 +3,16 @@ import 'drawer.dart';
 
 
 
-class SwoleLogHome extends StatefulWidget{
+class GainsLogHome extends StatefulWidget{
   @override
-  SwoleLogHomeState createState() => new SwoleLogHomeState();
+  GainsLogHomeState createState() => new GainsLogHomeState();
 }
 
-class SwoleLogHomeState extends State<SwoleLogHome> {
+class GainsLogHomeState extends State<GainsLogHome> {
   double setWeight = 0.0;
   double repCount = 0.0;
 
-  static final GlobalKey<SwoleLogHomeState> _scaffoldKey = new GlobalKey<SwoleLogHomeState>();
+  static final GlobalKey<GainsLogHomeState> _scaffoldKey = new GlobalKey<GainsLogHomeState>();
   @override
   void initState() {
     super.initState();
@@ -57,7 +57,7 @@ class SwoleLogHomeState extends State<SwoleLogHome> {
 
     Widget home = new Scaffold(
       key: _scaffoldKey,
-      drawer: new SwoleLogDrawer(),
+      drawer: new GainsLogDrawer(),
 
       body: new Container(
           padding: const EdgeInsets.all(16.0),
