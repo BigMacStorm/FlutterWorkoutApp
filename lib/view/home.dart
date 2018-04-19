@@ -12,6 +12,9 @@ class GainsLogHomeState extends State<GainsLogHome> {
   double setWeight = 0.0;
   double repCount = 0.0;
 
+  List<String> listExercise = <String>['Curls', 'Flys'];  
+  String selectedExercise = "Test";  
+
   static final GlobalKey<GainsLogHomeState> _scaffoldKey = new GlobalKey<GainsLogHomeState>();
   @override
   void initState() {
@@ -26,7 +29,21 @@ class GainsLogHomeState extends State<GainsLogHome> {
 
   @override
   Widget build(BuildContext context) {
-      
+    DropdownButton exerciseDropdown = new DropdownButton<String>(
+      //value: selectedExercise,
+      onChanged: (String exercise){
+        setState(() {
+          selectedExercise = exercise;
+        });        
+      },
+      items: listExercise.map((String exercise) {
+        return new DropdownMenuItem<String>(
+          value: exercise,
+          child: new Text(exercise),
+        );
+      }).toList(),
+    );
+
     TextField setWeightField = new TextField(
       keyboardType: TextInputType.number,
       decoration: new InputDecoration(labelText: "Weight amount"),
@@ -60,9 +77,10 @@ class GainsLogHomeState extends State<GainsLogHome> {
       drawer: new GainsLogDrawer(),
 
       body: new Container(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(40.0),
+          alignment: Alignment.bottomCenter,
           child: new Column(
-              children: [setWeightField, repCountField, calculateButton]
+              children: [exerciseDropdown, setWeightField, repCountField, calculateButton]
           )
       )
     );
