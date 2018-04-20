@@ -3,6 +3,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'view/home.dart';
+import 'view/add.dart';
 
 
 //import 'package:firebase_auth/firebase_auth.dart';
@@ -46,7 +47,7 @@ class GainsLogAppState extends State<GainsLogApp>{
       home: new GainsLogHome(),
       routes: <String, WidgetBuilder> {
         '/home': (BuildContext context) => new GainsLogHome(),
-        //'/add': (BuildContext context) => new GainsLogSettings(_configuration, configurationUpdater),
+        '/add': (BuildContext context) => new GainsLogAdd(),
       }
     );
   }
