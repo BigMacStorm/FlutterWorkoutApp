@@ -27,18 +27,20 @@ class _GainsLogAddState extends State<GainsLogAdd> {
 
   void _insert(){    
     //TODO: make this have an alertdialog with a text input field to request name on creation
-     setState(
-       (){
-       _list.insert(0, new Exercise("test99", new Uuid().generateV4()));
-     });    
+    setState(
+      (){
+        _list.insert(0, new Exercise("test99", new Uuid().generateV4()));
+      }
+    );    
   }
 
   void _remove(){    
     //let the user decide which one to actually delete, im thinking long press and a confirmation.
-     setState(
-       (){
-       _list.remove(_list[0]);
-     });    
+    setState(
+      (){
+        _list.remove(_list[0]);
+      }
+    );    
   }
 
   @override
