@@ -1,7 +1,3 @@
-// Copyright 2017 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -77,10 +73,6 @@ class _GainsLogAddState extends State<GainsLogAdd> {
   }
 }
 
-/// Displays its integer item as 'item N' on a Card whose color is based on
-/// the item's value. The text is displayed in bright green if selected is true.
-/// This widget's height is based on the animation parameter, it varies
-/// from 0 to 128 as the animation varies from 0.0 to 1.0.
 class ExerciseItem extends StatelessWidget {
   const ExerciseItem(this.item);
 
@@ -100,7 +92,6 @@ class ExerciseItem extends StatelessWidget {
 }
 
 
-// One Exercise in the multilevel list displayed by this app.
 class Exercise {
   Exercise(this.title, this.uuid);
   String title;

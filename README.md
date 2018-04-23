@@ -13,3 +13,8 @@ Optional features:
 Histographs by exercise to see change over time.
 Streak bonuses.
 Not a horrible UI.
+
+
+update:
+
+will be using sqflite to record each type of workout, and each one has a guid on it. these will be how items are added to the database. currently, i am not sure how i will handle removing set entries. 
